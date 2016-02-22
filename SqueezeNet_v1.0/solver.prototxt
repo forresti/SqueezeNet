@@ -1,0 +1,17 @@
+test_iter: 49
+test_interval: 500
+base_lr: 0.08
+display: 40
+max_iter: 85000
+iter_size: 32 #global batch size = batch_size * iter_size
+lr_policy: "poly"
+power: 0.5
+momentum: 0.9
+weight_decay: 0.0002
+snapshot: 1000
+snapshot_prefix: "train"
+solver_mode: GPU
+random_seed: 42
+net: "train_val.prototxt" #we typically do `cd SqueezeNet_v1.0; caffe train <args>` 
+test_initialization: false
+average_loss: 40
