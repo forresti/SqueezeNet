@@ -34,7 +34,7 @@ layer {
   }
   data_param {
     source: "examples/imagenet/ilsvrc12_val_lmdb"
-    batch_size: 32
+    batch_size: 25 #not *iter_size
     backend: LMDB
   }
 }

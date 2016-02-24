@@ -1,5 +1,5 @@
-test_iter: 49
-test_interval: 500
+test_iter: 2000 #not subject to iter_size
+test_interval: 1000
 base_lr: 0.08
 display: 40
 max_iter: 85000
