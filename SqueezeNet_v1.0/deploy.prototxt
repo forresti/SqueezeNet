@@ -4,46 +4,14 @@
 #     Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <1MB model size},
 #     Journal = {arXiv:1602.07360},
 #     Year = {2016}
-# }
-layer {
-  name: "data"
-  type: "Data"
-  top: "data"
-  top: "label"
-  include {
-    phase: TRAIN
-  }
-  transform_param {
-    crop_size: 227
-    mean_value: 104
-    mean_value: 117
-    mean_value: 123
-  }
-  data_param {
-    source: "examples/imagenet/ilsvrc12_train_lmdb"
-    batch_size: 32 #*iter_size
-    backend: LMDB
-  }
-}
-layer {
-  name: "data"
-  type: "Data"
-  top: "data"
-  top: "label"
-  include {
-    phase: TEST
-  }
-  transform_param {
-    crop_size: 227
-    mean_value: 104
-    mean_value: 117
-    mean_value: 123
-  }
-  data_param {
-    source: "examples/imagenet/ilsvrc12_val_lmdb"
-    batch_size: 25 #not *iter_size
-    backend: LMDB
-  }
+#}
+
+input: "data"
+input_shape {
+  dim: 10
+  dim: 3
+  dim: 227
+  dim: 227
 }
 layer {
   name: "conv1"
@@ -54,9 +22,6 @@ layer {
     num_output: 96
     kernel_size: 7
     stride: 2
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -84,9 +49,6 @@ layer {
   convolution_param {
     num_output: 16
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -103,9 +65,6 @@ layer {
   convolution_param {
     num_output: 64
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -123,9 +82,6 @@ layer {
     num_output: 64
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -149,9 +105,6 @@ layer {
   convolution_param {
     num_output: 16
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -168,9 +121,6 @@ layer {
   convolution_param {
     num_output: 64
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -188,9 +138,6 @@ layer {
     num_output: 64
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -214,9 +161,6 @@ layer {
   convolution_param {
     num_output: 32
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -233,9 +177,6 @@ layer {
   convolution_param {
     num_output: 128
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -253,9 +194,6 @@ layer {
     num_output: 128
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -280,7 +218,7 @@ layer {
     pool: MAX
     kernel_size: 3
     stride: 2
-  }
+ }
 }
 layer {
   name: "fire5/squeeze1x1"
@@ -290,9 +228,6 @@ layer {
   convolution_param {
     num_output: 32
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -309,9 +244,6 @@ layer {
   convolution_param {
     num_output: 128
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -329,9 +261,6 @@ layer {
     num_output: 128
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -355,9 +284,6 @@ layer {
   convolution_param {
     num_output: 48
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -374,9 +300,6 @@ layer {
   convolution_param {
     num_output: 192
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -394,9 +317,6 @@ layer {
     num_output: 192
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -420,9 +340,6 @@ layer {
   convolution_param {
     num_output: 48
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -439,9 +356,6 @@ layer {
   convolution_param {
     num_output: 192
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -459,9 +373,6 @@ layer {
     num_output: 192
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -485,9 +396,6 @@ layer {
   convolution_param {
     num_output: 64
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -504,9 +412,6 @@ layer {
   convolution_param {
     num_output: 256
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -524,9 +429,6 @@ layer {
     num_output: 256
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -551,7 +453,7 @@ layer {
     pool: MAX
     kernel_size: 3
     stride: 2
-  }
+ }
 }
 layer {
   name: "fire9/squeeze1x1"
@@ -561,9 +463,6 @@ layer {
   convolution_param {
     num_output: 64
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -580,9 +479,6 @@ layer {
   convolution_param {
     num_output: 256
     kernel_size: 1
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -600,9 +496,6 @@ layer {
     num_output: 256
     pad: 1
     kernel_size: 3
-    weight_filler {
-      type: "xavier"
-    }
   }
 }
 layer {
@@ -636,11 +529,6 @@ layer {
     num_output: 1000
     pad: 1
     kernel_size: 1
-    weight_filler {
-      type: "gaussian"
-      mean: 0.0
-      std: 0.01
-    }
   }
 }
 layer {
@@ -660,35 +548,8 @@ layer {
   }
 }
 layer {
-  name: "loss"
-  type: "SoftmaxWithLoss"
+  name: "prob"
+  type: "Softmax"
   bottom: "pool10"
-  bottom: "label"
-  top: "loss"
-  include {
-    phase: TRAIN
-  }
-}
-layer {
-  name: "accuracy"
-  type: "Accuracy"
-  bottom: "pool10"
-  bottom: "label"
-  top: "accuracy"
-  include {
-    phase: TEST
-  }
-}
-layer {
-  name: "accuracy_top5"
-  type: "Accuracy"
-  bottom: "pool10"
-  bottom: "label"
-  top: "accuracy_top5"
-  include {
-    phase: TEST
-  }
-  accuracy_param {
-    top_k: 5
-  }
+  top: "prob"
 }
