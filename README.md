@@ -9,7 +9,7 @@ If you find SqueezeNet useful in your research, please consider citing the [Sque
 
     @article{SqueezeNet,
         Author = {Forrest N. Iandola and Matthew W. Moskewicz and Khalid Ashraf and Song Han and William J. Dally and Kurt Keutzer},
-        Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <1MB model size},
+        Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and $<$1MB model size},
         Journal = {arXiv:1602.07360},
         Year = {2016}
     }
