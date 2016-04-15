@@ -24,3 +24,4 @@ In this repository, we include Caffe-compatible files for the model architecture
 
 3. **Implementing Fire modules.** In the paper, we describe the `expand` portion of the Fire layer as a collection of 1x1 and 3x3 filters. Caffe does not natively support a convolution layer that has multiple filter sizes. To work around this, we implement `expand1x1` and `expand3x3` layers and concatenate the results together in the channel dimension. 
 
+4. **The Compressed pretrained SqueezeNet model** is available here: https://github.com/songhan/SqueezeNet_compressed 
