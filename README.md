@@ -24,4 +24,27 @@ In this repository, we include Caffe-compatible files for the model architecture
 
 3. **Implementing Fire modules.** In the paper, we describe the `expand` portion of the Fire layer as a collection of 1x1 and 3x3 filters. Caffe does not natively support a convolution layer that has multiple filter sizes. To work around this, we implement `expand1x1` and `expand3x3` layers and concatenate the results together in the channel dimension. 
 
-4. **The Compressed pretrained SqueezeNet model** is available here: https://github.com/songhan/SqueezeNet_compressed 
+4. **The SqueezeNet team has released a few variants of SqueezeNet**. Each of these include pretrained models, and the non-compressed versions include training protocols, too.
+
+  SqueezeNet v1.0 (in this repo), the base model described in our SqueezeNet paper.
+
+  [Compressed SqueezeNet v1.0](https://github.com/songhan/SqueezeNet_compressed), as described in the SqueezeNet paper.
+  
+  [SqueezeNet v1.0 with Residual Connections](https://github.com/songhan/SqueezeNet-Residual), which delivers higher accuracy without increasing the model size.
+
+  [SqueezeNet v1.0 with Dense→Sparse→Dense (DSD) Training](https://github.com/songhan/SqueezeNet-DSD-Training), which delivers higher accuracy without increasing the model size.
+
+  SqueezeNet v1.1 (in this repo), which requires 2.4x less computation than SqueezeNet v1.0 without diminshing accuracy.
+
+5. **Community adoption of SqueezeNet**: 
+
+  [SqueezeNet in the *MXNet* framework](https://github.com/haria/SqueezeNet), by Guo Haria
+  
+  [SqueezeNet in the *Chainer* framework](https://github.com/ejlb/squeezenet-chainer), by Eddie Bell
+  
+  [SqueezeNet in the *Keras* framework](https://github.com/DT42/squeezenet_demo), by [dt42.io](https://dt42.io/)
+  
+  [Neural Art using SqueezeNet](https://github.com/pavelgonchar/neural-art-mini), by Pavel Gonchar
+  
+  [SqueezeNet compression in Ristretto](https://arxiv.org/abs/1605.06402), by Philipp Gysel
+
