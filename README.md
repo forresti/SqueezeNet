@@ -8,8 +8,8 @@ The Caffe-compatible files that you are probably looking for:
 If you find SqueezeNet useful in your research, please consider citing the [SqueezeNet paper](http://arxiv.org/abs/1602.07360):
 
     @article{SqueezeNet,
-        Author = {Forrest N. Iandola and Matthew W. Moskewicz and Khalid Ashraf and Song Han and William J. Dally and Kurt Keutzer},
-        Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and $<$1MB model size},
+        Author = {Forrest N. Iandola and Song Han and Matthew W. Moskewicz and Khalid Ashraf and William J. Dally and Kurt Keutzer},
+        Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and $<$0.5MB model size},
         Journal = {arXiv:1602.07360},
         Year = {2016}
     }
@@ -44,7 +44,10 @@ In this repository, we include Caffe-compatible files for the model architecture
   
   [SqueezeNet in the *Keras* framework](https://github.com/DT42/squeezenet_demo), by [dt42.io](https://dt42.io/)
   
+  [SqueezeNet in the *PyTorch* framework](https://github.com/pytorch/vision/blob/master/torchvision/models/squeezenet.py), by Marat Dukhan
+  
   [Neural Art using SqueezeNet](https://github.com/pavelgonchar/neural-art-mini), by Pavel Gonchar
   
   [SqueezeNet compression in Ristretto](https://arxiv.org/abs/1605.06402), by Philipp Gysel
+  
 
