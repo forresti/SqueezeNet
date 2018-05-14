@@ -43,6 +43,8 @@ In this repository, we include Caffe-compatible files for the model architecture
   [SqueezeNet in the *Chainer* framework](https://github.com/ejlb/squeezenet-chainer), by Eddie Bell
 
   [SqueezeNet in the *Keras* framework](https://github.com/DT42/squeezenet_demo), by [dt42.io](https://dt42.io/)
+  
+  [SqueezeNet in the *Tensorflow* framework](https://github.com/vonclites/squeezenet), by Domenick Poster
 
   [SqueezeNet in the *PyTorch* framework](https://github.com/pytorch/vision/blob/master/torchvision/models/squeezenet.py), by Marat Dukhan
 
