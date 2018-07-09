@@ -53,3 +53,5 @@ In this repository, we include Caffe-compatible files for the model architecture
   [Neural Art using SqueezeNet](https://github.com/pavelgonchar/neural-art-mini), by Pavel Gonchar
 
   [SqueezeNet compression in Ristretto](https://arxiv.org/abs/1605.06402), by Philipp Gysel
+  
+**If you like SqueezeNet, you might also like SqueezeNext! ([SqueezeNext paper](https://arxiv.org/abs/1803.10615), [SqueezeNext code](https://github.com/amirgholami/SqueezeNext))**
